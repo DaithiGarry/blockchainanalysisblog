@@ -26,8 +26,8 @@
 
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="block">block</span><span
-                class="thin">chain</span><span class="block">blast</span></a>
+            <a class="navbar-brand mb-2 mb-lg-0" href="{% url 'home' %}"><span class="block">block</span><span
+                class="chain">chain</span><span class="block">blast</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,6 +56,18 @@
             </div>
         </div>
     </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                {{ message | safe }}
+                <button type="button" class="button" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
     <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
@@ -110,8 +122,8 @@
   </div>
   <!-- TradingView Widget END -->
     <main class="container-fluid bg-dark">
-      <div class="mt-3 mb-2">
-        <h1 class="MuiTypographic-root MuiTypography-h1a text-white">Explore our different crypto coin analysis</h1>
+      <div class="main-text">
+        <h1 class="text-white">Explore our different crypto coin analysis</h1>
       </div>
         {% block content %}
         <!-- Content Goes here -->
