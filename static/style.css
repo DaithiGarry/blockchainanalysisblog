@@ -5,9 +5,15 @@ html {
     width: 100%;
 }
 
+.h3 {
+    color: #fff;
+}
+.p {
+    color: #fff;
+}
 body {
     margin: 0px;
-    color: rgb(255, 255, 255);
+    color: #fff;
     font-size: 14px;
     font-family:  Arial, sans-serif;
     font-weight: 400;
@@ -25,6 +31,18 @@ body {
 
 *, ::before, ::after {
     box-sizing: inherit;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    color: #fff
+    background-color: rgba(248, 246, 246, 0.125) ;
+    background-clip: border-box;
+    border: 2px solid #fff;
+    border-radius: .25rem;
 }
 
 .block {

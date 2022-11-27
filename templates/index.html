@@ -6,12 +6,12 @@
     <div class="row">
 
          <!-- Blog Entries Column -->
-         <div class="col-12 mt-3 left">
+         <div class="col-12 mt-3 left bg-dark">
             <div class="row">
                 {% for post in post_list %}
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <div class="card-body">
+                        <div class="card-body bg-dark text-white border-purple">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
