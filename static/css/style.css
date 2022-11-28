@@ -23,3 +23,13 @@ h1 {
     text-decoration: underline;
     color: rgb(238, 13, 189);
 }
+
+.card-title {
+    color: rgb(238, 13, 189);
+    text-decoration:underline;
+}
+
+.card-text {
+    color: #fff;
+    text-decoration:underline;
+}

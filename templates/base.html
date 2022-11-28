@@ -62,7 +62,7 @@
                 {% for message in messages %}
                 <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
                 {{ message | safe }}
-                <button type="button" class="button" data-bs-dismiss="alert" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 {% endfor %}
             </div>
@@ -139,6 +139,13 @@
             <a href="https://instagram.com" class="social-text" target="_blank" rel="noopener"><i class="fab fa-instagram-square ms-3"></i></a>
             <a href="https://youtube.com" class="social-text" target="_blank" rel="noopener"><i class="fab fa-youtube-square ms-3"></i></p></a>
     </footer>
+    <script>
+      setTimeout(function () {
+          let messages = document.getElementById('msg');
+          let alert = new bootstrap.Alert(messages);
+          alert.close();
+      }, 2500);
+    </script>
 </body>
 
 </html>
